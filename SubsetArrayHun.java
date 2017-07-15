@@ -30,16 +30,18 @@ public class SubsetArrayHun {
 					if(list.get(i) == list1.get(j))
 					{
 						count++;
-						System.out.println(count);
+					//	System.out.println(count);
 					}
-					if(count >= 3)
+					if(count == n)
 						flag = 1;
 				}
 			}
 			if(flag == 1)
 				System.out.println("List1 is a subset of List2");
+			else
+				System.out.println("List1 is not a subset of List2");
 		}
-		else
+		if(list1.size() < list.size())
 		{
 			for(i=0;i<list1.size();i++)
 			{
@@ -49,11 +51,13 @@ public class SubsetArrayHun {
 					{
 						count++;
 					}
-					if(count >= 3)
+					if(count == n1)
 						flag = 1;
 				}
 			}
 			if(flag == 1)
 				System.out.println("List2 is a subset of List1");
+			else
+				System.out.println("List2 is not a subset of List1");
 		}
 }}
