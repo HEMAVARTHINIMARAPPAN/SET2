@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class Main {
+public class AlexAsleepNotesPro67 {
 	public static void main(String args[])throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Integer count = 0;
