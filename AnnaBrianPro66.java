@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class AnnaBrianPro66 {
+public class AnnaBrian {
 	public static void main(String args[])throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Float sum=(float)0;
@@ -17,18 +17,18 @@ public class AnnaBrianPro66 {
 			cost.add(a);
 			share.add(a/2);	
 		}
+        System.out.println("Amount paid by the one who declined to eat:");
+        Float anna_paid = Float.parseFloat(br.readLine());
         share.remove(share.get(allergic_item));
         for(int i=0;i<share.size();i++)
         {
         sum += share.get(i);
         }
-        System.out.println("Amount paid by the one who declined to eat:");
-        Float anna_paid = Float.parseFloat(br.readLine());
-        if(anna_paid == sum)
-        	System.out.println("Bon Appetit");
-        else if(anna_paid >sum)
-        	System.out.println("Amount refund to Anna: "+Math.round(anna_paid-sum));
-        else
-        	System.out.println("Amount refund to Brian: "+Math.round(sum-anna_paid));   
+        if(Math.round(sum) == Math.round(anna_paid)){
+        	System.out.println("Bon Appetit");}
+        else if(anna_paid >sum){
+        	System.out.println("Amount refund to Anna: "+Math.round(anna_paid-sum));}
+        else{
+        	System.out.println("Amount refund to Brian: "+Math.round(sum-anna_paid)); }  
 
 }}
